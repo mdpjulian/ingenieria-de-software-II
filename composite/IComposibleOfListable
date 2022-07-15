@@ -1,0 +1,10 @@
+#ifndef IComposibleOfListable_H
+#define IComposibleOfListable_H
+#include "IListable.h"
+
+struct IComposableOfListable{
+    virtual void add(IListable* component) const = 0;
+    virtual void remove(IListable* component) const = 0;
+};
+
+#endif // IComposibleOfListable_H
