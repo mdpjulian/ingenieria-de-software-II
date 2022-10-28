@@ -10,7 +10,7 @@ class AudioPlayer
             isOpen = false; 
             isPlaying = false;
             setVolume(10);
-            setVersion(2.1);
+            setVersion(2);
         }
         ~AudioPlayer(){}
         void open(string filePath)
