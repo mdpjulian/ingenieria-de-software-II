@@ -73,3 +73,29 @@ TEST_CASE( "Correct translation into French", "[LanguageManager getTranslation]"
     // Assert
     REQUIRE( translation == "¡Salut monde!" );
 }
+
+TEST_CASE( "Correct translation into Russian", "[LanguageManager getTranslation]" )
+{
+    // Arrange
+    ILanguageManager* lm = languageManagerModule.getInstanceAs<ILanguageManager*>();
+ 
+    // Act
+    lm->setLanguage("rusRUS");
+    string translation = lm->translate("HELLO_WORLD");
+        
+    // Assert
+    REQUIRE( translation == "¡Привет, мир!" );
+}
+
+TEST_CASE( "Correct translation into German", "[LanguageManager getTranslation]" )
+{
+    // Arrange
+    ILanguageManager* lm = languageManagerModule.getInstanceAs<ILanguageManager*>();
+ 
+    // Act
+    lm->setLanguage("gerGER");
+    string translation = lm->translate("HELLO_WORLD");
+        
+    // Assert
+    REQUIRE( translation == "¡Hallo Welt!" );
+}
