@@ -13,11 +13,14 @@
 #include <ILanguageManager.hpp>
 #include <ModuleLoader.hpp>
 
+#include<windows.h>
+
 using namespace std;
 import lmModule = "./lib/LanguageManagerModule";
 
 int main()
 {
+    SetConsoleOutputCP(65001);.
     ILanguageManager* lm = lmModule.getInstanceAs<ILanguageManager*>();
     
     cout << "Default LANG, HELLO_WORLD: " << lm->translate("HELLO_WORLD") << endl;
